@@ -1105,18 +1105,18 @@ const TopBar = ({ setCurrentPage }) => {
 
   return (
     <div className="relative z-[100]">
-      <div className="w-full bg-white text-[17px] text-gray-500 flex flex-col md:flex-row justify-between items-center md:items-stretch border-b border-gray-200 tracking-wide font-light relative z-[90]">
-        <div className="px-4 md:px-8 py-2 md:py-2.5 flex items-center w-full md:w-auto justify-center md:justify-start border-b md:border-b-0 border-gray-200 md:border-transparent">60-Day-Returns</div>
+      <div className="w-full bg-[#141210] text-[11px] text-[#d8cbb8] flex flex-col md:flex-row justify-between items-center md:items-stretch border-b border-white/10 tracking-[0.22em] uppercase font-light relative z-[90]">
+        <div className="px-4 md:px-8 py-2.5 flex items-center w-full md:w-auto justify-center md:justify-start">Lifetime finish · One room</div>
         <div className="hidden xl:flex flex-wrap justify-center md:justify-end items-stretch md:border-l border-gray-200 w-full md:w-auto">
-          <button onClick={() => setIsRegionOpen(!isRegionOpen)} className="cursor-pointer hover:bg-gray-50 hover:text-black transition-colors px-3 md:px-4 py-2 md:py-2.5 border-r border-gray-200 flex items-center gap-1 uppercase outline-none focus:bg-gray-50">{getRegionLabel()} {isRegionOpen ? <ChevronUp size={12} strokeWidth={1.5}/> : <ChevronDown size={12} strokeWidth={1.5}/>}</button>
-          <button onClick={() => setCurrentPage('help_centre')} className="cursor-pointer hover:bg-gray-50 hover:text-black transition-colors px-3 md:px-4 py-2 md:py-2.5 border-r border-gray-200 flex items-center uppercase outline-none focus:bg-gray-50">HELP CENTRE</button>
+          <button onClick={() => setIsRegionOpen(!isRegionOpen)} className="cursor-pointer hover:bg-white/5 hover:text-[#f6f1ea] transition-colors px-3 md:px-4 py-2.5 border-r border-white/10 flex items-center gap-1 uppercase outline-none">{getRegionLabel()} {isRegionOpen ? <ChevronUp size={12} strokeWidth={1.5}/> : <ChevronDown size={12} strokeWidth={1.5}/>}</button>
+          <button onClick={() => setCurrentPage('help_centre')} className="cursor-pointer hover:bg-white/5 hover:text-[#f6f1ea] transition-colors px-3 md:px-4 py-2.5 border-r border-white/10 flex items-center uppercase outline-none">HELP CENTRE</button>
           
           <div 
             className="relative flex items-stretch border-r border-gray-200"
             onMouseEnter={() => setIsAboutHovered(true)}
             onMouseLeave={() => setIsAboutHovered(false)}
           >
-            <button className="cursor-pointer hover:bg-gray-50 hover:text-black transition-colors px-3 md:px-4 py-2 md:py-2.5 flex items-center gap-1 uppercase outline-none focus:bg-gray-50">
+            <button className="cursor-pointer hover:bg-white/5 hover:text-[#f6f1ea] transition-colors px-3 md:px-4 py-2.5 flex items-center gap-1 uppercase outline-none">
               ABOUT US <ChevronDown size={12} strokeWidth={1.5}/>
             </button>
             
@@ -1142,14 +1142,14 @@ const TopBar = ({ setCurrentPage }) => {
             </div>
           </div>
 
-          <button onClick={() => setCurrentPage('trade')} className="cursor-pointer hover:bg-gray-50 hover:text-black transition-colors px-3 md:px-4 py-2 md:py-2.5 border-r border-gray-200 flex items-center uppercase outline-none focus:bg-gray-50">TRADE</button>
+          <button onClick={() => setCurrentPage('trade')} className="cursor-pointer hover:bg-white/5 hover:text-[#f6f1ea] transition-colors px-3 md:px-4 py-2.5 border-r border-white/10 flex items-center uppercase outline-none">TRADE</button>
           
           <div 
             className="relative flex items-stretch"
             onMouseEnter={() => setIsLoginHovered(true)}
             onMouseLeave={() => setIsLoginHovered(false)}
           >
-            <button className="cursor-pointer hover:bg-gray-50 hover:text-black transition-colors px-3 md:px-4 py-2 md:py-2.5 flex items-center gap-1 uppercase outline-none focus:bg-gray-50">
+            <button className="cursor-pointer hover:bg-white/5 hover:text-[#f6f1ea] transition-colors px-3 md:px-4 py-2.5 flex items-center gap-1 uppercase outline-none">
               LOGIN <ChevronDown size={12} strokeWidth={1.5}/>
             </button>
 
@@ -1348,10 +1348,10 @@ const Navbar = ({ setCurrentPage, savedProductsCount, cartCount, setWorkspaceOpe
     <div 
       className="sticky top-0 z-50"
     >
-      <div className="bg-[#2d2d2d] text-white text-center py-2 px-4 text-[13px] font-light tracking-wide flex items-center justify-center gap-2">
-        <span>Portfolio showcase · a fictional kitchen and bathroom storefront</span>
+      <div className="bg-[#1c1915] text-[#e7d7bc] text-center py-2 px-4 text-[11px] font-light tracking-[0.32em] uppercase flex items-center justify-center gap-2">
+        <span>Portfolio showcase · a fictional kitchen and bathroom atelier</span>
       </div>
-      <nav className="bg-white w-full py-4 px-4 md:px-8 flex xl:grid xl:grid-cols-[1fr_auto_1fr] items-center justify-between border-b border-gray-200 transition-all duration-300 relative z-20">
+      <nav className="bg-[#f3eee6]/95 backdrop-blur-md w-full py-3 px-4 md:px-8 flex xl:grid xl:grid-cols-[1fr_auto_1fr] items-center justify-between border-b border-[#1c1915]/10 transition-all duration-300 relative z-20">
         <div className="flex items-center gap-4 md:gap-8 justify-start">
           {/* Mobile Hamburger Button */}
           <button 
@@ -1364,13 +1364,13 @@ const Navbar = ({ setCurrentPage, savedProductsCount, cartCount, setWorkspaceOpe
           </button>
 
           {/* Logo Placeholder */}
-          <div onClick={() => { setCurrentPage('home'); closeAllMenus(); }} className="flex flex-col leading-normal cursor-pointer py-1 mt-1 md:mt-0 relative z-50">
-            <span className="text-[32px] md:text-[46px] font-[100] text-[#222] tracking-[0.05em] mb-1 transition-all">VELA</span>
-            <span className="text-[7px] md:text-[8px] font-normal tracking-[0.45em] text-[#555] uppercase transition-all">ATELIER</span>
+          <div onClick={() => { setCurrentPage('home'); closeAllMenus(); }} className="flex flex-col leading-none cursor-pointer py-1 mt-1 md:mt-0 relative z-50">
+            <span className="font-serif italic font-medium text-[34px] md:text-[42px] text-[#141210] tracking-[-0.03em] leading-none">Vela</span>
+            <span className="text-[9px] font-normal tracking-[0.48em] text-[#8d6b3e] uppercase mt-1">Atelier</span>
           </div>
         </div>
 
-        <div className="hidden xl:flex flex-wrap justify-center gap-4 lg:gap-6 xl:gap-8 text-[17px] font-[300] text-gray-600 items-center">
+        <div className="hidden xl:flex flex-wrap justify-center gap-5 xl:gap-7 text-[12px] tracking-[0.18em] uppercase font-[400] text-[#1c1915]/70 items-center">
           <button 
               onClick={() => {
                 setCurrentPage('home');
@@ -1474,9 +1474,9 @@ const Navbar = ({ setCurrentPage, savedProductsCount, cartCount, setWorkspaceOpe
                   setIsLaundryMenuOpen(false);
                   setIsOutdoorMenuOpen(false);
                 }}
-                className={`transition-all duration-200 border-b-2 py-4 pb-2 flex items-center gap-1.5 font-medium text-base tracking-wider uppercase text-amber-600 hover:text-amber-700 ${isPlanningOpen ? 'border-amber-500 text-amber-800' : 'border-transparent'}`}
+                className={`transition-all duration-200 border-b py-4 pb-2 flex items-center gap-1.5 font-normal text-[12px] tracking-[0.22em] uppercase text-[#8d6b3e] hover:text-[#141210] ${isPlanningOpen ? 'border-[#8d6b3e] text-[#141210]' : 'border-transparent'}`}
               >
-                <Sparkles size={14} className="text-amber-500 animate-pulse" />
+                <Sparkles size={13} strokeWidth={1.25} className="text-[#8d6b3e]" />
                 Planning Studio
                 <ChevronDown size={12} className={`transition-transform duration-200 ${isPlanningOpen ? 'rotate-180' : ''}`} />
               </button>
@@ -2182,119 +2182,155 @@ const Navbar = ({ setCurrentPage, savedProductsCount, cartCount, setWorkspaceOpe
 };
 
 const Button = ({ children, outline, onClick = undefined }) => (
-  <button onClick={onClick} className={`flex items-center gap-4 px-8 py-4 text-[17px] tracking-widest uppercase transition-all duration-500 hover:bg-black hover:text-white ${outline ? 'border border-gray-300' : 'bg-black text-white'}`}>
+  <button onClick={onClick} className={`group flex items-center gap-4 px-7 py-3.5 text-[12px] tracking-[0.28em] uppercase transition-all duration-500 ${outline ? 'border border-[#141210]/25 text-[#141210] hover:bg-[#141210] hover:text-[#f3eee6]' : 'bg-[#141210] text-[#f3eee6] hover:bg-[#8d6b3e]'}`}>
     {children} <span className="font-light transition-transform duration-500 group-hover:translate-x-1">→</span>
   </button>
 );
 
 const Hero = ({ setCurrentPage }: { setCurrentPage: (page: string) => void }) => (
-  <section className="relative w-full h-[85vh] overflow-hidden flex items-center">
-    <motion.img referrerPolicy="no-referrer" 
-      initial={{ scale: 1.05 }}
-      animate={{ scale: 1 }}
-      transition={{ duration: 2, ease: "easeOut" }}
-      className="absolute inset-0 w-full h-full object-cover" 
-      src={heroImg}
-      alt="Hero Image"
-    />
-    <div className="absolute inset-0 bg-black/30" /> {/* Dark overlay for text legibility */}
-    <motion.div 
-      initial={{ opacity: 0, y: 20 }}
+  <section className="grid lg:grid-cols-[1.4fr_0.9fr] min-h-[calc(100svh-9rem)] bg-[#141210] text-[#f6f1ea]">
+    <div className="relative min-h-[46vh] lg:min-h-full overflow-hidden">
+      <motion.img referrerPolicy="no-referrer"
+        initial={{ scale: 1.08 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 2.4, ease: "easeOut" }}
+        className="absolute inset-0 w-full h-full object-cover object-[center_40%]"
+        src={heroImg}
+        alt="A Vela kitchen and bathroom interior"
+      />
+    </div>
+    <motion.div
+      initial={{ opacity: 0, y: 18 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, delay: 0.2 }}
-      className="relative z-10 w-full flex flex-col justify-center px-12 lg:px-32 py-20 text-white"
+      transition={{ duration: 1, delay: 0.12 }}
+      className="flex flex-col justify-between px-7 py-10 md:px-12 lg:py-14"
     >
-      <h1 className="text-5xl lg:text-[5.5rem] font-serif leading-[1.1] mb-10 tracking-tight max-w-4xl drop-shadow-md">
-        Kitchen and bathroom fixtures, <br /> specified as one room.
-      </h1>
+      <p className="text-[11px] tracking-[0.42em] uppercase text-[#e7d7bc]">Kitchen · Bath · One finish book</p>
       <div>
-        <button 
+        <h1 className="font-serif italic font-medium text-[clamp(3.4rem,5.6vw,5.6rem)] leading-[0.88] tracking-[-0.03em]">
+          Specified<br />as one room.
+        </h1>
+        <p className="mt-6 max-w-sm text-[15px] leading-relaxed text-[#f6f1ea]/75 font-light">
+          Tapware, sinks, tiles, and hardware drawn from a single palette, so the kitchen and the bath read as one composition.
+        </p>
+        <button
           onClick={() => setCurrentPage('kitchen_sinks')}
-          className="group flex items-center gap-4 px-8 py-4 text-[17px] tracking-widest uppercase transition-all duration-500 border border-white hover:bg-white hover:text-black"
+          className="group mt-8 inline-flex items-center gap-4 text-[12px] tracking-[0.32em] uppercase"
         >
-          Explore <span className="font-light transition-transform duration-500 group-hover:translate-x-1">→</span>
+          Enter the collection
+          <span className="block h-px w-12 bg-[#e7d7bc] transition-all duration-500 group-hover:w-20" />
         </button>
       </div>
+      <p className="text-[11px] tracking-[0.28em] uppercase text-[#e7d7bc]/80">Est. 2019 · Lifetime finish</p>
     </motion.div>
   </section>
 );
 
-const ProductCard = ({ title, description, linkText, image, onClick = undefined }) => (
-  <motion.div 
-    initial={{ opacity: 0, y: 20 }}
+const ProductCard = ({ index, title, description, linkText, image, tall = false, compact = false, onClick = undefined }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 28 }}
     whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "-100px" }}
-    transition={{ duration: 0.8 }}
-    className="flex flex-col group cursor-pointer"
+    viewport={{ once: true, margin: "-80px" }}
+    transition={{ duration: 0.9, ease: "easeOut" }}
+    className={`group cursor-pointer relative overflow-hidden bg-[#1c1915] ${tall ? 'min-h-[520px] md:min-h-[720px]' : compact ? 'min-h-[280px] md:min-h-[320px]' : 'min-h-[340px] md:min-h-[380px]'}`}
     onClick={onClick}
   >
-    <div className="w-full aspect-[4/5] bg-gray-100 mb-8 overflow-hidden relative">
-      <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
-      <img referrerPolicy="no-referrer" src={image} alt={title} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-[1.03]" />
+    <img referrerPolicy="no-referrer" src={image} alt={title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.06]" />
+    <div className="absolute inset-0 bg-gradient-to-t from-[#141210]/85 via-[#141210]/15 to-transparent" />
+    <div className="absolute inset-0 p-6 md:p-8 flex flex-col justify-between text-[#f6f1ea]">
+      <span className="font-serif italic text-2xl text-[#e7d7bc]">{index}</span>
+      <div>
+        <h3 className="font-serif italic text-4xl md:text-5xl leading-none mb-3">{title}</h3>
+        <p className="text-[13px] leading-relaxed text-[#f6f1ea]/80 max-w-xs mb-5 font-light">{description}</p>
+        <span className="inline-flex items-center gap-3 text-[11px] tracking-[0.28em] uppercase">
+          {linkText}
+          <span className="block h-px w-8 bg-[#e7d7bc] transition-all duration-500 group-hover:w-14" />
+        </span>
+      </div>
     </div>
-    <h3 className="text-2xl font-serif text-gray-900 mb-4">{title}</h3>
-    <p className="text-[17px] text-gray-500 leading-relaxed mb-8 flex-grow">{description}</p>
-    <button className="text-[17px] tracking-widest uppercase text-gray-900 flex items-center gap-3 transition-colors border-b border-gray-900 pb-1 self-start hover:text-gray-500 hover:border-gray-500 duration-300">
-      {linkText}
-    </button>
   </motion.div>
 );
 
 const CategoryGrid = ({ setCurrentPage }) => (
-  <section className="py-16 px-6 lg:px-16 max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-16">
-    <ProductCard 
-      title="Antique Collection" 
-      description="Aged brass and gunmetal for rooms that want a little history, without looking restored." 
-      linkText="Shop Collection" 
-      image={antiqueImg}
-      onClick={() => setCurrentPage('bathroom_wastes')}
-    />
-    <ProductCard 
-      title="Arlo" 
-      description="Fluted stainless sinks, finished to sit with the same brass and black tapware used in the bathroom." 
-      linkText="Shop Arlo" 
-      image={nessoImg}
-      onClick={() => setCurrentPage('kitchen_sinks')}
-    />
-    <ProductCard 
-      title="Tiles" 
-      description="Small-format tiles for floors and splashbacks, chosen to sit beside the metal finishes in the catalogue." 
-      linkText="Shop Tiles" 
-      image={tilesImg}
-      onClick={() => setCurrentPage('bathroom_wastes')}
-    />
-    <ProductCard 
-      title="Entry Pulls" 
-      description="Door and entry pulls in the same finishes as the tapware, so the hardware reads as one set." 
-      linkText="Shop Entry Pulls" 
-      image={entryPullImg}
-      onClick={() => setCurrentPage('bathroom_wastes')}
-    />
+  <section className="px-4 md:px-8 lg:px-12 py-16 lg:py-24 max-w-[1680px] mx-auto">
+    <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 lg:mb-14">
+      <div>
+        <p className="text-[11px] tracking-[0.4em] uppercase text-[#8d6b3e] mb-3">The lookbook</p>
+        <h2 className="font-serif italic text-5xl lg:text-7xl text-[#141210] leading-[0.9]">Four rooms,<br />one finish.</h2>
+      </div>
+      <p className="max-w-sm text-[14px] leading-relaxed text-[#1c1915]/70 font-light md:text-right">
+        Aged brass, fluted steel, stone, and entry hardware, composed so a house can be specified from a single book.
+      </p>
+    </div>
+    <div className="grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-4">
+      <div className="md:col-span-7">
+        <ProductCard
+          index="01"
+          tall
+          title="Antique"
+          description="Aged brass and gunmetal for rooms that want a little history, without looking restored."
+          linkText="View the collection"
+          image={antiqueImg}
+          onClick={() => setCurrentPage('bathroom_wastes')}
+        />
+      </div>
+      <div className="md:col-span-5 flex flex-col gap-3 md:gap-4">
+        <ProductCard
+          index="02"
+          title="Arlo"
+          description="Fluted stainless sinks finished to sit with the same brass and black tapware."
+          linkText="View Arlo"
+          image={nessoImg}
+          onClick={() => setCurrentPage('kitchen_sinks')}
+        />
+        <div className="grid grid-cols-2 gap-3 md:gap-4">
+          <ProductCard
+            index="03"
+            compact
+            title="Tiles"
+            description="Small formats beside the metal finishes."
+            linkText="View"
+            image={tilesImg}
+            onClick={() => setCurrentPage('bathroom_wastes')}
+          />
+          <ProductCard
+            index="04"
+            compact
+            title="Entry"
+            description="Pulls in the same finish family."
+            linkText="View"
+            image={entryPullImg}
+            onClick={() => setCurrentPage('bathroom_wastes')}
+          />
+        </div>
+      </div>
+    </div>
   </section>
 );
 
 const FeatureSection = ({ title, text, buttonText, imageLeft, imageSrc, onClick = undefined }) => (
-  <section className={`flex flex-col ${imageLeft ? 'md:flex-row' : 'md:flex-row-reverse'} w-full items-stretch`}>
-    <div className="w-full md:w-1/2 min-h-[50vh] md:min-h-[70vh] overflow-hidden relative">
-      <motion.img referrerPolicy="no-referrer" 
-        initial={{ scale: 1.1 }}
+  <section className={`flex flex-col ${imageLeft ? 'md:flex-row' : 'md:flex-row-reverse'} w-full items-stretch bg-[#ebe4d8]`}>
+    <div className="w-full md:w-[56%] min-h-[52vh] md:min-h-[78vh] overflow-hidden relative">
+      <motion.img referrerPolicy="no-referrer"
+        initial={{ scale: 1.08 }}
         whileInView={{ scale: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
+        transition={{ duration: 1.6, ease: "easeOut" }}
         className="absolute inset-0 w-full h-full object-cover"
         src={imageSrc}
         alt={title}
       />
     </div>
-    <div className="w-full md:w-1/2 p-16 lg:p-16 flex flex-col justify-center bg-[#fafafa] min-h-[50vh] md:min-h-[70vh]">
+    <div className="w-full md:w-[44%] px-8 py-16 lg:px-16 xl:px-20 flex flex-col justify-center bg-[#ebe4d8] min-h-[46vh]">
       <motion.div
-        initial={{ opacity: 0, x: imageLeft ? 20 : -20 }}
-        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, y: 18 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <h2 className="text-4xl lg:text-5xl font-serif text-gray-900 mb-8 leading-tight">{title}</h2>
-        <p className="text-[17px] text-gray-500 leading-relaxed mb-12 max-w-lg">{text}</p>
+        <p className="text-[11px] tracking-[0.38em] uppercase text-[#8d6b3e] mb-5">{imageLeft ? 'The material' : 'The studio'}</p>
+        <h2 className="text-5xl lg:text-6xl font-serif italic text-[#141210] mb-8 leading-[0.95]">{title}</h2>
+        <p className="text-[15px] text-[#1c1915]/70 leading-relaxed mb-12 max-w-md font-light">{text}</p>
         <div>
           <Button outline onClick={onClick}>{buttonText}</Button>
         </div>
@@ -2304,38 +2340,24 @@ const FeatureSection = ({ title, text, buttonText, imageLeft, imageSrc, onClick 
 );
 
 const IconRange = () => {
-  const icons = [
-    { name: 'TOILETS', svg: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round"><path d="M6 10h12v8a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-8z"/><path d="M8 10V6h8v4"/><circle cx="10" cy="8" r="0.5"/><circle cx="14" cy="8" r="0.5"/></svg> },
-    { name: 'MIRRORS', svg: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round"><path d="M7 10v10h10V10a5 5 0 0 0-10 0z"/><line x1="10" y1="10" x2="14" y2="6"/><line x1="10" y1="15" x2="14" y2="11"/></svg> },
-    { name: 'ACCESSORIES', svg: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="8" cy="12" r="3"/><line x1="11" y1="12" x2="22" y2="12"/><line x1="11" y1="10" x2="11" y2="14"/><line x1="22" y1="10" x2="22" y2="14"/></svg> },
-    { name: 'HARDWARE', svg: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="7"/><line x1="12" y1="5" x2="12" y2="19"/></svg> },
-    { name: 'SINKS', svg: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round"><polygon points="4,10 20,10 18,16 6,16" /><polygon points="4,10 6,8 22,8 20,10" /><polygon points="20,10 22,8 20,14 18,16" /></svg> },
-    { name: 'TILES', svg: <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="0.8" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="11" width="8" height="8"/><rect x="13" y="6" width="6" height="14"/><rect x="8" y="4" width="5" height="7"/></svg> }
-  ];
-
-  const marqueeIcons = [...icons, ...icons, ...icons, ...icons];
+  const rooms = ['Toilets', 'Mirrors', 'Accessories', 'Hardware', 'Sinks', 'Tiles'];
+  const ribbon = [...rooms, ...rooms, ...rooms, ...rooms];
 
   return (
-    <section className="py-10 flex flex-col items-center bg-white overflow-hidden border-b border-gray-100">
-      <div className="w-full relative flex items-center group">
-        <div className="w-full overflow-hidden flex relative mask-image-fade">
-          <motion.div 
-            className="flex gap-16 lg:gap-16 items-center w-max pr-16 lg:pr-32"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{ repeat: Infinity, ease: "linear", duration: 30 }}
-          >
-            {marqueeIcons.map((item, index) => (
-              <div key={index} className="flex flex-col items-center gap-6 cursor-pointer group/icon">
-                <div className="text-gray-600 group-hover/icon:text-black transition-colors duration-300">
-                  {item.svg}
-                </div>
-                <span className="text-[17px] tracking-[0.2em] text-gray-500 group-hover/icon:text-black transition-colors uppercase font-medium whitespace-nowrap">
-                  {item.name}
-                </span>
-              </div>
-            ))}
-          </motion.div>
-        </div>
+    <section className="py-8 bg-[#141210] overflow-hidden">
+      <div className="w-full overflow-hidden mask-image-fade">
+        <motion.div
+          className="flex items-center w-max"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{ repeat: Infinity, ease: "linear", duration: 42 }}
+        >
+          {ribbon.map((name, index) => (
+            <span key={index} className="flex items-center text-[#f3eee6]">
+              <span className="font-serif italic text-3xl md:text-4xl px-6 md:px-8 whitespace-nowrap">{name}</span>
+              <span className="text-[#e7d7bc] text-lg">✦</span>
+            </span>
+          ))}
+        </motion.div>
       </div>
     </section>
   );
@@ -3751,13 +3773,13 @@ const TradePage = () => {
 const Footer = ({ setCurrentPage, setProductFilter, setComingSoonModal }) => {
   const { region, setRegion } = useRegion();
   return (
-  <footer className="w-full border-t border-gray-200 pt-8 pb-6 px-6 lg:px-12 bg-white font-sans text-gray-800">
+  <footer className="w-full border-t border-white/10 pt-16 pb-8 px-6 lg:px-12 bg-[#141210] font-sans text-[#f3eee6]">
     {/* Top Brand & Contact Info Bar */}
     <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-6 items-start max-w-[1600px] mx-auto">
       {/* Brand logo */}
-      <div onClick={() => setCurrentPage('home')} className="flex flex-col leading-tight cursor-pointer hover:opacity-80 transition-opacity">
-        <span className="text-[46px] font-[100] text-[#222] tracking-[0.05em] mb-1">VELA</span>
-        <span className="text-[8px] font-normal tracking-[0.45em] text-[#555] uppercase">ATELIER</span>
+      <div onClick={() => setCurrentPage('home')} className="flex flex-col leading-none cursor-pointer hover:opacity-80 transition-opacity">
+        <span className="font-serif italic text-[52px] text-[#f6f1ea] tracking-[-0.03em] leading-none">Vela</span>
+        <span className="text-[10px] font-normal tracking-[0.48em] text-[#e7d7bc] uppercase mt-2">Atelier</span>
       </div>
 
       {/* Locations */}
@@ -3874,7 +3896,7 @@ const Footer = ({ setCurrentPage, setProductFilter, setComingSoonModal }) => {
     </div>
 
     {/* Email Signup Card Component */}
-    <div className="max-w-[1600px] mx-auto border border-gray-200 rounded-[6px] p-6 bg-white mb-6 shadow-[0_2px_8px_rgba(0,0,0,0.015)]">
+    <div className="max-w-[1600px] mx-auto border border-white/15 p-8 md:p-10 bg-[#1c1915] mb-8">
       <div className="flex flex-col gap-4">
         <div>
           <h3 className="font-serif text-[24px] text-[#222] font-light mb-2">Enjoy $25 Off Today*</h3>
@@ -4665,7 +4687,7 @@ export default function App() {
   const totalCartCount = cart.length + projectCart.length + bookings.length;
 
   return (
-    <div className="min-h-screen bg-white font-sans text-gray-800">
+    <div className="min-h-screen bg-[#f3eee6] font-sans text-[#1c1915]">
       <TopBar setCurrentPage={setCurrentPage} />
       <Navbar 
         setCurrentPage={setCurrentPage} 

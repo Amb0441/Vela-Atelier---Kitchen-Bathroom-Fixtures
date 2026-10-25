@@ -1,14 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Playfair Display", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --color-ink: #141210;
+  --color-paper: #f3eee6;
+  --color-brass: #8d6b3e;
+  --color-sand: #e7dfd2;
 }
 
 @utility mask-image-fade {
-  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
 }
 
 @utility hide-scrollbar {
@@ -19,31 +23,90 @@
   }
 }
 
-/* Global scrollbar hiding for screens < 1920px */
-@media (max-width: 1919px) {
-  * {
-    -ms-overflow-style: none !important;
-    scrollbar-width: none !important;
-  }
-  *::-webkit-scrollbar {
-    display: none !important;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
-/* Custom styled scrollbars for screens >= 1920px */
-@media (min-width: 1920px) {
-  ::-webkit-scrollbar {
-    width: 6px;
-    height: 6px;
-  }
-  ::-webkit-scrollbar-track {
-    background: #fcfbf9;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #4b5563;
-    border-radius: 9999px;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: #374151;
-  }
+body {
+  background: #f3eee6;
+  color: #1c1915;
+  font-feature-settings: "ss01" on, "kern" on;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #141210;
+  color: #f3eee6;
+}
+
+/* Quiet brass in place of sale-amber across the storefront. */
+.text-amber-500,
+.text-amber-600,
+.text-amber-700,
+.text-amber-800 {
+  color: #8d6b3e !important;
+}
+.bg-amber-50,
+.bg-amber-50\/50,
+.hover\:bg-amber-50\/50:hover,
+.hover\:bg-amber-100\/70:hover {
+  background-color: #f4ecdf !important;
+}
+.bg-amber-100,
+.bg-amber-100\/70 {
+  background-color: #eadcc6 !important;
+}
+.border-amber-500,
+.border-amber-800,
+.hover\:border-amber-800:hover {
+  border-color: #8d6b3e !important;
+}
+.bg-amber-500 {
+  background-color: #8d6b3e !important;
+}
+
+footer .text-black,
+footer .text-\[\#222\],
+footer .text-\[\#333\],
+footer h3,
+footer h4 {
+  color: #f6f1ea !important;
+}
+footer .text-gray-500,
+footer .text-gray-400,
+footer .text-gray-800 {
+  color: #cfc3b2 !important;
+}
+footer .hover\:text-black:hover {
+  color: #e7d7bc !important;
+}
+footer .border-gray-200,
+footer .border-gray-100,
+footer .border-gray-300,
+footer .border-black,
+footer hr {
+  border-color: rgba(243, 238, 230, 0.16) !important;
+}
+footer input {
+  background: transparent;
+  color: #f6f1ea;
+  border-color: rgba(243, 238, 230, 0.28) !important;
+}
+footer input:focus {
+  border-color: #e7d7bc !important;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f3eee6;
+}
+::-webkit-scrollbar-thumb {
+  background: #c9bfb0;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8d6b3e;
 }
